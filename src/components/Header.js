@@ -30,8 +30,9 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 position: fixed;
-width: 100%; height: 8vh;
+width: 100%; height: 4rem;
 background: #24292F;
+z-index: 10;
 color: white;
 @media (max-width: 768px) {
   height: 6vh;
@@ -58,6 +59,7 @@ border-radius: 6px;
 outline: none;
 background: none;
 padding: 0.4rem 0.6rem;
+transition: all 0.3s ease;
 @media (max-width: 768px) {
   display: none;
 }

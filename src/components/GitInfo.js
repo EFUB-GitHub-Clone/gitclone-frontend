@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import RepoBox from "../containers/RepoBox";
+import Contribution from '../containers/Contribution';
 import pencil from "../assets/pencil.PNG";
 
 function GitInfo() {
@@ -41,22 +42,17 @@ function GitInfo() {
                     </div>
                 </SubTitle>
             </IntroBox>
-            <Contribution>
+            <Contribute>
                 <div style={{'width':'82%'}}>
                     <SubTitle style={{'margin-top':'0'}}>Contribution activity</SubTitle>
-                    <div style={{'display':'flex'}}>
-                        <Date style={{'color':'#24292F'}}>November</Date>
-                        <Date>2021</Date>
-                        <Hr />
-                    </div>
-
-
+                    <Contribution />
                 </div>
-                <div>
-                    dfd
+                <div style={{'padding':'0 2rem'}}>
+                    <Year style={{'color':'white'}}>2021</Year>
+                    <Year style={{'background':'none'}}>2020</Year>
+                    <Year style={{'background':'none'}}>2019</Year>
                 </div>
-            </Contribution>
-
+            </Contribute>
         </GitWrapper>
     );
 }
@@ -108,6 +104,7 @@ const PinnedWrapper = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
+text-align: left;
 `
 
 const SmallFont = styled.div`
@@ -120,30 +117,26 @@ width: 0.7rem; height: 0.7rem;
 border-radius: 0.2rem;
 `
 
-const Contribution = styled.div`
+const Contribute = styled.div`
 display: flex;
 margin-top: 2rem;
 `
 
-const Date = styled.div`
+const Year = styled.button`
+display: flex;
 font-size: 0.8rem;
+text-align: left;
+width: 100%;
+padding: 0.6rem 1.4rem;
+outline: none;
+border-radius: 0.6rem;
+background: #0969DA;
+border: none;
+box-sizing: inherit;
 color: #6E7781;
-margin-right: 0.3rem;
-font-weight: 600;
-`
-
-const Hr = styled.hr`
-width: 85%;
-background: #D8DEE4;
-border: 0;
-`
-
-const Timeline = styled.div`
-
-`
-
-const Acitivity = styled.div`
-
+&:hover {
+  cursor: pointer;
+}
 `
 
 export default GitInfo;

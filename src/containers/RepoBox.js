@@ -47,15 +47,11 @@ padding: 0.2rem
 const RepoName = styled.div`
 color: #0969DA;
 font-weight: 600;
-&:hover {
-  cursor: pointer;
-}
+cursor: pointer;
 `
 
 const Image = styled.img`
-&:hover {
-  cursor: pointer;
-}
+cursor: pointer;
 `
 
 const RepoContent = styled.div`

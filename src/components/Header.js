@@ -29,10 +29,8 @@ const Head = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
-position: fixed;
 width: 100%; height: 4rem;
 background: #24292F;
-z-index: 10;
 color: white;
 @media (max-width: 768px) {
   height: 6vh;
@@ -42,9 +40,7 @@ color: white;
 
 const Logo = styled.img`
 padding: 0.5rem;
-&:hover {
-  cursor: pointer;
-}
+cursor: pointer;
 `;
 
 const Search = styled.input.attrs({
@@ -90,9 +86,9 @@ border: none;
 display: block;
 box-sizing: inherit;
 color: white;
+cursor: pointer;
 &:hover {
   color: #C8C9CB;
-  cursor: pointer;
 }
 @media (max-width: 768px) {
   display: none;
@@ -102,9 +98,7 @@ color: white;
 const Icon = styled.img`
 justify-content: center;
 display: block;
-&:hover {
-  cursor: pointer;
-}
+cursor: pointer;
 @media (max-width: 768px) {
   display: none;
 }

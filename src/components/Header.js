@@ -2,7 +2,7 @@ import React from "react";
 import styled, {css} from "styled-components";
 import img from '../assets/github-mark.PNG';
 import alarmImg from '../assets/alarm.PNG';
-import menu from '../assets/menu.PNG';
+import plus from '../assets/plus.PNG';
 import user from '../assets/user.PNG';
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
             </Menu>
             <Menu style={{'gap':'3px'}}>
                 <Icon src={alarmImg}/>
-                <Icon src={menu}/>
+                <Icon src={plus}/>
                 <Icon src={user}/>
             </Menu>
         </Head>

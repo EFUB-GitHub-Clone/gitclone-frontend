@@ -7,50 +7,91 @@ import styled from 'styled-components';
 function InitializingRepo() {
     return (
         <div>
-          <h3>Initialize this repository with:</h3>
-          <p>Skip this step if you’re importing an existing repository.</p>
-          <label>
+          <InitialTitle>Initialize this repository with:</InitialTitle>
+          <Discribe>Skip this step if you’re importing an existing repository.</Discribe>
+          <Label>
             <input
               type="checkbox"
               name="README"
             />
-            <h3>Add a README file</h3>
-            <p>This is where you can write a long description for your project. &nbsp;
-              <a 
-                href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
-                style={{textDecoration: 'none', color: '#0969da'}}>Learn more.</a>
-            </p>
-          </label>
-          <label>
+            <OptionInfo>
+              <OptionTitle>Add a README file</OptionTitle>
+              <SubDiscribe>This is where you can write a long description for your project. &nbsp;
+                <a 
+                  href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+                  style={{textDecoration: 'none', color: '#0969da'}}>Learn more.</a>
+              </SubDiscribe>
+            </OptionInfo>
+          </Label>
+          <Label>
             <input
               type="checkbox"
               name="gitignore"
             />
-            <h3>Add .gitignore</h3>
-            <p>Choose which files not to track from a list of templates. &nbsp;
-              <a 
-                href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files"
-                style={{textDecoration: 'none', color: '#0969da'}}>Learn more.</a>
-            </p>
-          </label>
-          <label>
+            <OptionInfo>
+              <OptionTitle>Add .gitignore</OptionTitle>
+              <SubDiscribe>Choose which files not to track from a list of templates. &nbsp;
+                <a 
+                  href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files"
+                  style={{textDecoration: 'none', color: '#0969da'}}>Learn more.</a>
+              </SubDiscribe>
+            </OptionInfo>
+          </Label>
+          <Label>
             <input
               type="checkbox"
               name="license"
             />
-            <h3>Choose a license</h3>
-            <p>A license tells others what they can and can't do with your code.  &nbsp;
-              <a 
-                href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository"
-                style={{textDecoration: 'none', color: '#0969da'}}>Learn more.</a>
-            </p>
-          </label>
-          <p>This will set  main as the default branch. Change the default name in your  &nbsp;
-            <a href="https://github.com/settings/repositories"
-            style={{textDecoration: 'none', color: '#0969da'}}>settings.</a>
-          </p>
+            <OptionInfo>
+              <OptionTitle>Choose a license</OptionTitle>
+              <SubDiscribe>A license tells others what they can and can't do with your code.  &nbsp;
+                <a 
+                  href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository"
+                  style={{textDecoration: 'none', color: '#0969da'}}>Learn more.</a>
+              </SubDiscribe>
+            </OptionInfo>
+
+          </Label>
         </div>
     );
 }
+
+const OptionInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 3px;
+`
+
+const InitialTitle = styled.h3`
+  font-weight: 600;
+  font-size: 1rem;
+  color: #24292F;
+  margin-bottom: 0;
+`
+
+const Discribe = styled.p`
+  font-size: 1rem;
+  margin: 0;
+  color: gray;
+`
+
+const SubDiscribe = styled.p`
+  font-size: 0.8rem;
+  margin: 0;
+  color: gray;
+`
+
+const Label = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0px 15px 0px;
+`
+
+const OptionTitle = styled.h3`
+  font-weight: 600;
+  font-size: 1rem;
+  color: '#24292F';
+  margin: 0;
+`
 
 export default InitializingRepo;

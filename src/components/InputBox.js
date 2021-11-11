@@ -21,13 +21,13 @@ function InputBox() {
               <MdArrowDropDown/>
             </OwnerButton>
           </SelectOwner>
-          <h1 style={{margin: '10px', fontWeight: '350', paddingTop: '35px'}}>/</h1>
+          <h1 style={{margin: '10px', fontWeight: '350', paddingTop: '27px'}}>/</h1>
           <InputNameBox>
             <Title>Repository name <span style={{color:'#D02531'}}>*</span></Title>
             <Input type="text" style={{width: '350px'}}></Input>
           </InputNameBox>
         </MustInputWrapper>
-        <p>Great repository names are short and memorable. Need inspiration? How about &nbsp;
+        <p style={{fontSize: '0.9rem', margin: 0}}>Great repository names are short and memorable. Need inspiration? How about &nbsp;
           <span style={{color:'green', fontWeight: '500'}}>cuddly-waddle?</span>
         </p>
         <InputTextBox>
@@ -56,6 +56,7 @@ const SelectOwner = styled.div`
 const Title = styled.h3`
   font-weight: 500;
   margin-bottom: 10px;
+  font-size: 0.9rem;
 `
 
 const OwnerButton = styled.button`

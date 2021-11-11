@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import InputBox from '../components/InputBox';
 import PrivacySetting from '../components/PrivacySetting';
 import InitializingRepo from '../components/InitializingRepo';
+import CreateRepoBtn from '../components/CreateRepoBtn';
 
 function CreateRepo() {
   return (
@@ -25,6 +26,9 @@ function CreateRepo() {
           <Initialize>
             <InitializingRepo/>
           </Initialize>
+          <Submit>
+            <CreateRepoBtn/>
+          </Submit>
         </CreateRepoWrapper>
 
       </div>
@@ -60,6 +64,12 @@ const Privacy = styled.div`
 const Initialize = styled.div`
   width: 65vw;
   border-bottom: 1px solid #D8DEE4;
+`
+
+const Submit = styled.div`
+  display: flex;
+  width: 65vw;
+  margin: 20px 0 50px 0;
 `
 
 export default CreateRepo;

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import InputBox from '../components/InputBox';
+import PrivacySetting from '../components/PrivacySetting';
 
 function CreateRepo() {
   return (
@@ -17,9 +18,9 @@ function CreateRepo() {
           <RepoName>
            <InputBox/>
           </RepoName>
-          <Disclosure>
-
-          </Disclosure>
+          <Privacy>
+            <PrivacySetting/>
+          </Privacy>
           <Initialize>
 
           </Initialize>
@@ -33,6 +34,7 @@ const CreateRepoWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
 `
 
 const Info = styled.div`
@@ -49,8 +51,9 @@ const RepoName = styled.div`
 `
 
 
-const Disclosure = styled.div`
-
+const Privacy = styled.div`
+  width: 65vw;
+  border-bottom: 1px solid #D8DEE4;
 `
 
 const Initialize = styled.div`

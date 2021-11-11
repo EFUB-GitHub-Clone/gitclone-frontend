@@ -26,9 +26,9 @@ function InputBox() {
           <span style={{color:'green', fontWeight: '500'}}>cuddly-waddle?</span>
         </p>
         <InputTextBox>
-            <Title>Description <span style={{fontWeight: '350', fontSize: '0.9rem'}}>(optional)</span></Title>
-            <Input type="text" style={{width: '98%'}}></Input>
-          </InputTextBox>
+          <Title>Description <span style={{fontWeight: '350', fontSize: '0.9rem'}}>(optional)</span></Title>
+          <Input type="text" style={{width: "98%"}}></Input>
+        </InputTextBox>
       </InputBoxWrapper>
   );
 }
@@ -68,7 +68,6 @@ const InputNameBox = styled.div`
 `
 
 const InputTextBox = styled.div`
-
 `
 
 export default InputBox;

@@ -7,6 +7,8 @@ import styled from 'styled-components';
 function InitializingRepo() {
     return (
         <div>
+          <h3>Initialize this repository with:</h3>
+          <p>Skip this step if you’re importing an existing repository.</p>
           <label>
             <input
               type="checkbox"
@@ -43,6 +45,10 @@ function InitializingRepo() {
                 style={{textDecoration: 'none', color: '#0969da'}}>Learn more.</a>
             </p>
           </label>
+          <p>This will set  main as the default branch. Change the default name in your  &nbsp;
+            <a href="https://github.com/settings/repositories"
+            style={{textDecoration: 'none', color: '#0969da'}}>settings.</a>
+          </p>
         </div>
     );
 }

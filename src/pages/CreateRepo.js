@@ -11,8 +11,8 @@ function CreateRepo() {
       <div>
         <CreateRepoWrapper>
           <Info>
-            <p>
-              <h2 style={{fontWeight: 400, fontSize: '24px', marginBottom: '0'}}>Create a new repository</h2>
+            <p style={{color: "#57606A"}}>
+              <h2 style={{fontWeight: 400, fontSize: '24px', marginBottom: '0', color: 'black'}}>Create a new repository</h2>
               A repository contains all project files, including the revision history. Already have a project repository elsewhere?<br />
               <a href="https://github.com/new/import" style={{textDecoration: 'none', color: '#0969da'}}>Import a repository.</a>
             </p>

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../components/Header';
 import InputBox from '../components/InputBox';
 import PrivacySetting from '../components/PrivacySetting';
+import InitializingRepo from '../components/InitializingRepo';
 
 function CreateRepo() {
   return (
@@ -22,7 +23,7 @@ function CreateRepo() {
             <PrivacySetting/>
           </Privacy>
           <Initialize>
-
+            <InitializingRepo/>
           </Initialize>
         </CreateRepoWrapper>
 
@@ -57,7 +58,8 @@ const Privacy = styled.div`
 `
 
 const Initialize = styled.div`
-
+  width: 65vw;
+  border-bottom: 1px solid #D8DEE4;
 `
 
 export default CreateRepo;

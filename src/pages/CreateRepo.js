@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../components/Header';
 import InputBox from '../components/InputBox';
 import PrivacySetting from '../components/PrivacySetting';
 import InitializingRepo from '../components/InitializingRepo';
 import CreateRepoBtn from '../components/CreateRepoBtn';
+import Footer from '../components/Footer'
 
 function CreateRepo() {
   return (
@@ -29,8 +29,10 @@ function CreateRepo() {
           <Submit>
             <CreateRepoBtn/>
           </Submit>
+          <Foot>
+            <Footer/>
+          </Foot>
         </CreateRepoWrapper>
-
       </div>
   );
 }
@@ -71,6 +73,11 @@ const Submit = styled.div`
   display: flex;
   width: 55vw;
   margin: 20px 0 50px 0;
+`
+
+const Foot = styled.div`
+  width: 70vw;
+  border-top: 1px solid #D8DEE4;
 `
 
 export default CreateRepo;

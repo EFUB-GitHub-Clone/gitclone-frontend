@@ -2,7 +2,7 @@ import React from "react";
 import styled, {css} from "styled-components";
 import img from '../assets/github-mark.PNG';
 import alarmImg from '../assets/alarm.PNG';
-import menu from '../assets/menu.PNG';
+import plus from '../assets/plus.PNG';
 import user from '../assets/user.PNG';
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
             </Menu>
             <Menu style={{'gap':'3px'}}>
                 <Icon src={alarmImg}/>
-                <Icon src={menu}/>
+                <Icon src={plus}/>
                 <Icon src={user}/>
             </Menu>
         </Head>
@@ -29,8 +29,7 @@ const Head = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
-position: fixed;
-width: 100%; height: 8vh;
+width: 100%; height: 4rem;
 background: #24292F;
 color: white;
 @media (max-width: 768px) {
@@ -41,9 +40,7 @@ color: white;
 
 const Logo = styled.img`
 padding: 0.5rem;
-&:hover {
-  cursor: pointer;
-}
+cursor: pointer;
 `;
 
 const Search = styled.input.attrs({
@@ -58,6 +55,7 @@ border-radius: 6px;
 outline: none;
 background: none;
 padding: 0.4rem 0.6rem;
+transition: all 0.3s ease;
 @media (max-width: 768px) {
   display: none;
 }
@@ -88,9 +86,9 @@ border: none;
 display: block;
 box-sizing: inherit;
 color: white;
+cursor: pointer;
 &:hover {
   color: #C8C9CB;
-  cursor: pointer;
 }
 @media (max-width: 768px) {
   display: none;
@@ -100,9 +98,7 @@ color: white;
 const Icon = styled.img`
 justify-content: center;
 display: block;
-&:hover {
-  cursor: pointer;
-}
+cursor: pointer;
 @media (max-width: 768px) {
   display: none;
 }

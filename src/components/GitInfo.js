@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip';
+import GitHubCalendar from 'react-github-calendar';
 import styled from 'styled-components';
 import RepoBox from "../containers/RepoBox";
 import Contribution from '../containers/Contribution';
@@ -25,20 +27,11 @@ function GitInfo() {
                 <RepoBox />
             </PinnedWrapper>
             <SubTitle>819 contributions in the last year</SubTitle>
-            <IntroBox>
-                <SubTitle>
-                    <GitButton style={{'fontSize':'0.7rem'}}>Learn how we count contributions</GitButton>
-                    <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.2rem'}}>
-                        <SmallFont>Less</SmallFont>
-                        <Grass style={{'background':'#EBEDF0'}} />
-                        <Grass style={{'background':'#9BE9A8'}} />
-                        <Grass style={{'background':'#40C463'}} />
-                        <Grass style={{'background':'#30A14E'}} />
-                        <Grass style={{'background':'#216E39'}} />
-                        <SmallFont>More</SmallFont>
-                    </div>
-                </SubTitle>
-            </IntroBox>
+            <ContributionBox>
+                <GitHubCalendar username="sua-kim" hideTotalCount showWeekdayLabels fontSize={10} >
+                    <ReactTooltip html />
+                </GitHubCalendar>
+            </ContributionBox>
             <Contribute>
                 <div style={{'width':'82%'}}>
                     <SubTitle style={{'marginTop':'0'}}>Contribution activity</SubTitle>
@@ -104,14 +97,12 @@ justify-content: space-between;
 text-align: left;
 `
 
-const SmallFont = styled.div`
-font-size: 0.8rem;
-color: #6E7781;
-`
-
-const Grass = styled.div`
-width: 0.7rem; height: 0.7rem;
-border-radius: 0.2rem;
+const ContributionBox = styled.div`
+display: flex;
+justify-content: center;
+border: 1px solid #D8DEE4;
+border-radius: 0.5em;
+padding: 1rem 2.5rem;
 `
 
 const Contribute = styled.div`

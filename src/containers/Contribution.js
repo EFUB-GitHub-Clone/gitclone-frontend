@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import hide from "../assets/hide.PNG";
 import commit from "../assets/commit.PNG";
@@ -10,6 +10,10 @@ import check from '../assets/check.PNG';
 import logo from '../assets/bigLogo.PNG';
 
 function Contribution() {
+    const [display, setDisplay] = useState([{id: 0, active: true}, {id: 1, active: true}, {id: 2, active: true}]);
+    const onDisplay = (n) => {
+        setDisplay(display.map(type => type.id === n ? { ...type, active: !type.active } : type));
+    };
     return (
         <div>
             <div style={{'display':'flex'}}>
@@ -21,95 +25,101 @@ function Contribution() {
             <Activity>
                 <ActivitySummary>
                     <img src={commit} />
-                    <div style={{'margin-left':'1rem'}}>Created 13 commits in 3 repositories</div>
+                    <div style={{'marginLeft':'1rem'}}>Created 13 commits in 3 repositories</div>
                 </ActivitySummary>
-                <Button><img src={hide} /></Button>
+                <Button onClick = {()=>onDisplay(0)}><img src={hide} /></Button>
             </Activity>
-            <Timeline>
-                <ActivityWrapper>
-                    <ActivityDetail>
-                        <RepoName>EFUB-GitHub-Clone/gitclone-frontend</RepoName>
-                        <CommitNum>6 commits</CommitNum>
-                    </ActivityDetail>
-                    <Graph style={{'background':'#40C463'}}/>
-                </ActivityWrapper>
-                <ActivityWrapper>
-                    <ActivityDetail>
-                        <RepoName>2-FleaEWHA/FleaEWHA-frontend</RepoName>
-                        <CommitNum>6 commits</CommitNum>
-                    </ActivityDetail>
-                    <Graph style={{'background':'#40C463'}}/>
-                </ActivityWrapper>
-                <ActivityWrapper>
-                    <ActivityDetail>
-                        <RepoName>sua-kim/responsive-website</RepoName>
-                        <CommitNum>1 commits</CommitNum>
-                    </ActivityDetail>
-                    <Graph style={{'background':'#9BE9A8', 'width': '1rem'}}/>
-                </ActivityWrapper>
-            </Timeline>
+            { display[0].active ? (
+                <Timeline>
+                    <ActivityWrapper>
+                        <ActivityDetail>
+                            <RepoName>EFUB-GitHub-Clone/gitclone-frontend</RepoName>
+                            <CommitNum>6 commits</CommitNum>
+                        </ActivityDetail>
+                        <Graph style={{'background':'#40C463'}}/>
+                    </ActivityWrapper>
+                    <ActivityWrapper>
+                        <ActivityDetail>
+                            <RepoName>2-FleaEWHA/FleaEWHA-frontend</RepoName>
+                            <CommitNum>6 commits</CommitNum>
+                        </ActivityDetail>
+                        <Graph style={{'background':'#40C463'}}/>
+                    </ActivityWrapper>
+                    <ActivityWrapper>
+                        <ActivityDetail>
+                            <RepoName>sua-kim/responsive-website</RepoName>
+                            <CommitNum>1 commits</CommitNum>
+                        </ActivityDetail>
+                        <Graph style={{'background':'#9BE9A8', 'width': '1rem'}}/>
+                    </ActivityWrapper>
+                </Timeline>
+            ):''}
             <Timeline style={{'height':'2rem'}}/>
 
 
             <Activity>
                 <ActivitySummary>
                     <img src={fork} />
-                    <div style={{'margin-left':'1rem'}}>Opened 2 pull requests in 1 repository</div>
+                    <div style={{'marginLeft':'1rem'}}>Opened 2 pull requests in 1 repository</div>
                 </ActivitySummary>
-                <Button><img src={hide} /></Button>
+                <Button onClick = {()=>onDisplay(1)}><img src={hide} /></Button>
             </Activity>
-            <Timeline>
-                <ActivityWrapper style={{'justify-content':'space-between', 'padding-right':' 0.5rem'}}>
-                    <RepoName>EFUB-GitHub-Clo...</RepoName>
-                    <CommitNum>merged</CommitNum>
-                </ActivityWrapper>
-                <ActivityWrapper style={{'justify-content':'space-between', 'padding-right':' 0.5rem'}}>
-                    <div style={{'display':'flex'}}>
-                        <img src={merged} /><RepoName style={{'color':'black'}}>modify: 헤더 수정</RepoName>
-                    </div>
-                    <CommitNum>Nov 7</CommitNum>
-                </ActivityWrapper>
-                <ActivityWrapper style={{'justify-content':'space-between', 'padding-right':' 0.5rem'}}>
-                    <div style={{'display':'flex'}}>
-                        <img src={merged} /><RepoName style={{'color':'black'}}>feat: 헤더 퍼블리싱</RepoName>
-                    </div>
-                    <CommitNum>Nov 7</CommitNum>
-                </ActivityWrapper>
-            </Timeline>
+            { display[1].active ? (
+                <Timeline>
+                    <ActivityWrapper style={{'justifyContent':'space-between', 'paddingRight':' 0.5rem'}}>
+                        <RepoName>EFUB-GitHub-Clo...</RepoName>
+                        <CommitNum>merged</CommitNum>
+                    </ActivityWrapper>
+                    <ActivityWrapper style={{'justifyContent':'space-between', 'paddingRight':' 0.5rem'}}>
+                        <div style={{'display':'flex'}}>
+                            <img src={merged} /><RepoName style={{'color':'black'}}>modify: 헤더 수정</RepoName>
+                        </div>
+                        <CommitNum>Nov 7</CommitNum>
+                    </ActivityWrapper>
+                    <ActivityWrapper style={{'justifyContent':'space-between', 'paddingRight':' 0.5rem'}}>
+                        <div style={{'display':'flex'}}>
+                            <img src={merged} /><RepoName style={{'color':'black'}}>feat: 헤더 퍼블리싱</RepoName>
+                        </div>
+                        <CommitNum>Nov 7</CommitNum>
+                    </ActivityWrapper>
+                </Timeline>
+            ): ''}
             <Timeline style={{'height':'2rem'}}/>
 
 
             <Activity>
                 <ActivitySummary>
                     <img src={issue} />
-                    <div style={{'margin-left':'1rem'}}>Opened 1 issue in 1 repository</div>
+                    <div style={{'marginLeft':'1rem'}}>Opened 1 issue in 1 repository</div>
                 </ActivitySummary>
-                <Button><img src={hide} /></Button>
+                <Button onClick = {()=>onDisplay(2)}><img src={hide} /></Button>
             </Activity>
-            <Timeline>
-                <ActivityWrapper style={{'justify-content':'space-between', 'padding-right':' 0.5rem'}}>
-                    <RepoName>EFUB-GitHub-Clo...</RepoName>
-                    <CommitNum>closed</CommitNum>
-                </ActivityWrapper>
-                <ActivityWrapper style={{'justify-content':'space-between', 'padding-right':' 0.5rem'}}>
-                    <div style={{'display':'flex'}}>
-                        <img src={check} /><RepoName style={{'color':'black'}}>Header 추가</RepoName>
-                    </div>
-                    <CommitNum>Nov 7</CommitNum>
-                </ActivityWrapper>
-            </Timeline>
+            { display[2].active ? (
+                <Timeline>
+                    <ActivityWrapper style={{'justifyContent':'space-between', 'paddingRight':' 0.5rem'}}>
+                        <RepoName>EFUB-GitHub-Clo...</RepoName>
+                        <CommitNum>closed</CommitNum>
+                    </ActivityWrapper>
+                    <ActivityWrapper style={{'justifyContent':'space-between', 'paddingRight':' 0.5rem'}}>
+                        <div style={{'display':'flex'}}>
+                            <img src={check} /><RepoName style={{'color':'black'}}>Header 추가</RepoName>
+                        </div>
+                        <CommitNum>Nov 7</CommitNum>
+                    </ActivityWrapper>
+                </Timeline>
+            ):''}
             <Timeline style={{'height':'2rem'}}/>
 
 
             <Activity>
                 <ActivitySummary>
                     <img src={organization} />
-                    <div style={{'margin-left':'1rem'}}>Joined the EFUB-GitHub-Clone organization</div>
+                    <div style={{'marginLeft':'1rem'}}>Joined the EFUB-GitHub-Clone organization</div>
                 </ActivitySummary>
                 <Button>on Nov 6</Button>
             </Activity>
             <Timeline>
-                <ActivityWrapper style={{'padding-right':' 0.5rem'}}>
+                <ActivityWrapper style={{'paddingRight':' 0.5rem'}}>
                     <OrganizationBox>
                         <img src={logo} />
                         <OrganizationName>EFUB-GitHub-Clone</OrganizationName>
@@ -117,8 +127,8 @@ function Contribution() {
                 </ActivityWrapper>
             </Timeline>
             <Timeline style={{'height':'2rem'}}/>
-            <div style={{'display':'flex', 'justify-content': 'center'}}>
-                <MoreBtn>Show more acitivity</MoreBtn>
+            <div style={{'display':'flex', 'justifyContent': 'center'}}>
+                <MoreBtn>Show more activity</MoreBtn>
             </div>
             <CommitNum>Seeing something unexpected? Take a look at the GitHub profile guide.</CommitNum>
         </div>

@@ -9,10 +9,10 @@ function GitInfo() {
         <GitWrapper>
             <IntroBox>
                 <Readme>
-                    <p style={{'font-size':'0.75rem'}}>sua-kim / README.md</p>
+                    <p style={{'fontSize':'0.75rem'}}>sua-kim / README.md</p>
                     <img style={{'width':'1.6rem', 'height':'1.6rem', 'cursor':'pointer'}} src={pencil} />
                 </Readme>
-                <p style={{'font-size':'1.1rem', 'font-weight': '600'}}>Hi there👋</p>
+                <p style={{'fontSize':'1.1rem', 'fontWeight': '600'}}>Hi there👋</p>
             </IntroBox>
             <SubTitle>
                 <div>Pinned</div>
@@ -24,14 +24,11 @@ function GitInfo() {
                 <RepoBox />
                 <RepoBox />
             </PinnedWrapper>
-            <SubTitle>
-                <div>819 contributions in the last year</div>
-                <GitButton>Contribution settings</GitButton>
-            </SubTitle>
+            <SubTitle>819 contributions in the last year</SubTitle>
             <IntroBox>
                 <SubTitle>
-                    <GitButton style={{'font-size':'0.7rem'}}>Learn how we count contributions</GitButton>
-                    <div style={{'display':'flex', 'align-items': 'center', 'gap':'0.2rem'}}>
+                    <GitButton style={{'fontSize':'0.7rem'}}>Learn how we count contributions</GitButton>
+                    <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.2rem'}}>
                         <SmallFont>Less</SmallFont>
                         <Grass style={{'background':'#EBEDF0'}} />
                         <Grass style={{'background':'#9BE9A8'}} />
@@ -44,7 +41,7 @@ function GitInfo() {
             </IntroBox>
             <Contribute>
                 <div style={{'width':'82%'}}>
-                    <SubTitle style={{'margin-top':'0'}}>Contribution activity</SubTitle>
+                    <SubTitle style={{'marginTop':'0'}}>Contribution activity</SubTitle>
                     <Contribution />
                 </div>
                 <div style={{'padding':'0 2rem'}}>

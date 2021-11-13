@@ -34,7 +34,7 @@ function Profile() {
                 <img src={email} /> sua917@ewhain.net
             </Info>
             <Hr />
-            <p style={{'font-weight':'600'}}>Organizations</p>
+            <p style={{'fontWeight':'600'}}>Organizations</p>
             <Follow>
                 <img src={organ1} />
                 <img src={organ2} />
@@ -113,7 +113,7 @@ gap: 0.1rem;
 `
 
 const Hr = styled.hr`
-width: 21rem;
+width: 90%;
 height: 0.1rem;
 background: #D8DEE4;
 border: 0;

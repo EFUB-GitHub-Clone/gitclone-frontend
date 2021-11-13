@@ -7,11 +7,11 @@ function RepoBox() {
     return (
         <Box>
             <RepoTitle>
-                <div style={{'display':'flex', 'align-items': 'center'}}>
+                <div style={{'display':'flex', 'alignItems': 'center'}}>
                     <Icon src={repo}/>
                     <RepoName>Algorithm</RepoName>
                 </div>
-                <div style={{'display':'flex', 'align-items': 'center', 'gap':'0.5rem'}}>
+                <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.5rem'}}>
                     <Status>Public</Status>
                     <Image src={menu} />
                 </div>

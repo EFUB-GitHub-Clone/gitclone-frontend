@@ -14,7 +14,7 @@ function Main() {
         <MainWrapper>
             <Header />
             <Menu>
-                <Button style={{'font-weight':'600', 'color':'black', 'border-bottom':'2px solid #FD8C73'}}><Icon src={overview}/>Overview</Button>
+                <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><Icon src={overview}/>Overview</Button>
                 <Button><Icon src={repo}/>Repositories<RepoNum>14</RepoNum></Button>
                 <Button><Icon src={project}/>Projects</Button>
                 <Button><Icon src={pack}/>Packages</Button>

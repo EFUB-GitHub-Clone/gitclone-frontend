@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Route path="/" component={Main}/>
+        <Route exact path="/" component={Main}/>
         <Route path="/create-repo" component={CreateRepo}/>
       </BrowserRouter>
     </div>

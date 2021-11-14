@@ -4,11 +4,13 @@ import InputBox from '../components/InputBox';
 import PrivacySetting from '../components/PrivacySetting';
 import InitializingRepo from '../components/InitializingRepo';
 import CreateRepoBtn from '../components/CreateRepoBtn';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 function CreateRepo() {
   return (
       <div>
+        <Header/>
         <CreateRepoWrapper>
           <Info>
             <p style={{color: "#57606A", fontSize: '0.89rem'}}>

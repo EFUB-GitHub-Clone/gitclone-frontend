@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../components/Header';
 import Profile from '../components/Profile';
 import GitInfo from '../components/GitInfo';
+import Footer from '../components/Footer';
 import overview from '../assets/overview.PNG';
 import pack from '../assets/package.PNG';
 import project from '../assets/project.PNG';
@@ -13,18 +14,28 @@ function Main() {
     return (
         <MainWrapper>
             <Header />
-            <Menu>
-                <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><Icon src={overview}/>Overview</Button>
-                <Button><Icon src={repo}/>Repositories<RepoNum>14</RepoNum></Button>
-                <Button><Icon src={project}/>Projects</Button>
-                <Button><Icon src={pack}/>Packages</Button>
-            </Menu>
+            <Wrapper style={{'border-bottom': '1px solid #D8DEE4'}}>
+                <MenuWrapper>
+                    <Menu style={{'width':'70vw'}}>
+                        <Menu style={{'width':'20vw'}} />
+                        <Menu style={{'width':'50vw'}}>
+                            <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><Icon src={overview}/>Overview</Button>
+                            <Button><Icon src={repo}/>Repositories<RepoNum>14</RepoNum></Button>
+                            <Button><Icon src={project}/>Projects</Button>
+                            <Button><Icon src={pack}/>Packages</Button>
+                        </Menu>
+                    </Menu>
+                </MenuWrapper>
+            </Wrapper>
             <Wrapper>
-                <div style={{'display':'flex','width':'75%'}}>
+                <div style={{'display':'flex','width':'70vw', 'gap':'1vw'}}>
                     <Profile />
                     <GitInfo />
                 </div>
             </Wrapper>
+            <Foot>
+                <Footer/>
+            </Foot>
         </MainWrapper>
     );
 }
@@ -33,12 +44,16 @@ const MainWrapper = styled.div`
 text-align: center;
 `
 
+const MenuWrapper = styled.div`
+display: flex;
+justify-content: center;
+width: 75vw; height: 5rem;
+gap: 1vw;
+`
+
 const Menu = styled.div`
 display: flex;
 align-items: flex-end;
-width: 100%; height: 5rem;
-border-bottom: 1px solid #D8DEE4;
-justify-content: center;
 gap: 1rem;
 `
 
@@ -74,6 +89,11 @@ margin-left: 0.3rem;
 const Wrapper = styled.div`
 display: flex;
 justify-content: center;
+`
+
+const Foot = styled.div`
+  width: 70vw;
+  border-top: 1px solid #D8DEE4;
 `
 
 export default Main;

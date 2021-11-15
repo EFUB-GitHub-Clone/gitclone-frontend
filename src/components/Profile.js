@@ -14,8 +14,7 @@ import organ4 from '../assets/organization4.PNG';
 function Profile() {
     return (
         <ProfileWrapper>
-            <ProfileImg src={profileImage} />
-            <ProfileInfo>
+            <div style={{'text-align':'center'}}><ProfileImg src={profileImage} /></div>
             <UserName>Su a Kim</UserName>
             <UserId>sua-kim</UserId>
             <Bio>🏃‍♀️ Growing Developer</Bio>
@@ -41,27 +40,23 @@ function Profile() {
                 <img src={organ3} />
                 <img src={organ4} />
             </Follow>
-            </ProfileInfo>
+
         </ProfileWrapper>
     );
 }
 
 const ProfileWrapper = styled.div`
-width: 30%;
+width: 20vw;
 text-align: left;
 `
 
 const ProfileImg = styled.img`
-position: absolute;
-top: 7rem;
 text-align: center;
-width: 20rem; height: 20rem;
+width: 16vw;
+height: 16vw;
+object-fit: cover;
 border-radius: 50%;
 z-index: 10;
-`
-
-const ProfileInfo = styled.div`
-padding-top: 19rem;
 `
 
 const UserName = styled.div`

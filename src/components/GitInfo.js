@@ -48,14 +48,14 @@ function GitInfo() {
 }
 
 const GitWrapper = styled.div`
-width: 70%;
+width: 50vw;
 padding-top: 2rem;
 `
 
 const IntroBox = styled.div`
 border: 1px solid #D8DEE4;
 border-radius: 0.5em;
-padding: 0.5rem 1.5rem;
+padding: 0.5vw 1.5vw;
 text-align: left;
 `
 

@@ -1,9 +1,9 @@
 import React from "react";
 import styled, {css} from "styled-components";
 import img from '../assets/github-mark.PNG';
-import alarmImg from '../assets/alarm.PNG';
 import plus from '../assets/plus.PNG';
 import user from '../assets/user.PNG';
+import {BiBell} from 'react-icons/bi';
 
 const Header = () => {
     return (
@@ -16,8 +16,8 @@ const Header = () => {
                 <Button>Marketplace</Button>
                 <Button>Explore</Button>
             </Menu>
-            <Menu style={{'gap':'3px'}}>
-                <Icon src={alarmImg}/>
+            <Menu style={{'gap':'0.5vw'}}>
+                <BiBell style={{'cursor':'pointer'}}/>
                 <Icon src={plus}/>
                 <Icon src={user}/>
             </Menu>
@@ -32,10 +32,6 @@ align-items: center;
 width: 100%; height: 4rem;
 background: #24292F;
 color: white;
-@media (max-width: 768px) {
-  height: 6vh;
-  justify-content: space-around
-}
 `;
 
 const Logo = styled.img`

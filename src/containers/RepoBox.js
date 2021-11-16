@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import repo from '../assets/repo.PNG';
-import menu from '../assets/menu.PNG';
+import {FiTrash2} from 'react-icons/fi';
 
 function RepoBox() {
     return (
@@ -11,9 +11,9 @@ function RepoBox() {
                     <Icon src={repo}/>
                     <RepoName>Algorithm</RepoName>
                 </div>
-                <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.5rem'}}>
+                <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.5vw'}}>
                     <Status>Public</Status>
-                    <Image src={menu} />
+                    <DeleteBtn><FiTrash2 /></DeleteBtn>
                 </div>
             </RepoTitle>
             <RepoContent>알고리즘 소스코드 기록 레포</RepoContent>
@@ -26,7 +26,7 @@ function RepoBox() {
 }
 
 const Box = styled.div`
-width: 47%;
+width: 23vw;
 padding: 0.5rem;
 margin-bottom: 0.5rem;
 border: 1px solid #D8DEE4;
@@ -50,7 +50,10 @@ font-weight: 600;
 cursor: pointer;
 `
 
-const Image = styled.img`
+const DeleteBtn = styled.button`
+background: none;
+outline: none;
+border: none;
 cursor: pointer;
 `
 

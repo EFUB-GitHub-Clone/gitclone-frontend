@@ -11,7 +11,7 @@ function RepoBox() {
                     <Icon src={repo}/>
                     <RepoName>Algorithm</RepoName>
                 </div>
-                <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.5rem'}}>
+                <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.5vw'}}>
                     <Status>Public</Status>
                     <DeleteBtn><FiTrash2 /></DeleteBtn>
                 </div>

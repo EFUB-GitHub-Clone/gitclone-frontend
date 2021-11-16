@@ -8,7 +8,7 @@ import overview from '../assets/overview.PNG';
 import pack from '../assets/package.PNG';
 import project from '../assets/project.PNG';
 import repo from '../assets/repo.PNG';
-import profileImage from '../assets/profileImg.jpg';
+import {BiBookBookmark} from 'react-icons/bi';
 
 function Main() {
     return (
@@ -18,11 +18,14 @@ function Main() {
                 <MenuWrapper>
                     <Menu style={{'width':'70vw'}}>
                         <Menu style={{'width':'20vw'}} />
-                        <Menu style={{'width':'50vw'}}>
-                            <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><Icon src={overview}/>Overview</Button>
-                            <Button><Icon src={repo}/>Repositories<RepoNum>14</RepoNum></Button>
-                            <Button><Icon src={project}/>Projects</Button>
-                            <Button><Icon src={pack}/>Packages</Button>
+                        <Menu style={{'width':'50vw', 'justify-content':'space-between'}}>
+                            <Menu>
+                                <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><Icon src={overview}/>Overview</Button>
+                                <Button><Icon src={repo}/>Repositories<RepoNum>14</RepoNum></Button>
+                                <Button><Icon src={project}/>Projects</Button>
+                                <Button><Icon src={pack}/>Packages</Button>
+                            </Menu>
+                            <CreateBtn><BiBookBookmark style={{'margin-right':'0.5rem'}}/>New</CreateBtn>
                         </Menu>
                     </Menu>
                 </MenuWrapper>
@@ -54,7 +57,7 @@ gap: 1vw;
 const Menu = styled.div`
 display: flex;
 align-items: flex-end;
-gap: 1rem;
+gap: 1vw;
 `
 
 const Icon = styled.img`
@@ -72,8 +75,25 @@ outline: none;
 background: none;
 border: none;
 box-sizing: inherit;
-&:hover {
-  cursor: pointer;
+cursor: pointer;
+`
+
+const CreateBtn = styled.button`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 2.2rem;
+font-size: 0.9rem;
+color: white;
+outline: none;
+background: #2DA44E;
+border: 1px #2C974B solid; border-radius: 0.5rem;
+box-sizing: inherit;
+padding: 0 0.8rem;
+margin-bottom: 0.2rem;
+cursor: pointer;
+&:hover{
+background: #2C974B;
 }
 `
 

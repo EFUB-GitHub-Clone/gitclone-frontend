@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {FiMail, FiMapPin} from 'react-icons/fi';
+import {BiBuildings, BiStar} from 'react-icons/bi';
+import {BsPeople} from 'react-icons/bs';
 import profileImage from "../assets/profileImg.jpg";
-import follower from '../assets/follower.PNG';
-import star from '../assets/star.PNG';
-import building from '../assets/building.PNG';
-import position from '../assets/position.PNG';
-import email from '../assets/mail.PNG';
 import organ1 from '../assets/organization1.PNG';
 import organ2 from '../assets/organization2.PNG';
 import organ3 from '../assets/organization3.PNG';
@@ -20,17 +18,18 @@ function Profile() {
             <Bio>🏃‍♀️ Growing Developer</Bio>
             <Edit>Edit profile</Edit>
             <Follow>
-                <img src={follower} /><FollowerNum>7</FollowerNum> followersㆍ<FollowerNum>8</FollowerNum> followingㆍ
-                <img src={star} /><FollowerNum>5</FollowerNum>
+                <BsPeople style={{'width':'1.2rem','height':'1.2rem', 'margin-right':'0.1vw'}}/>
+                <FollowerNum>7</FollowerNum> followersㆍ<FollowerNum>8</FollowerNum> followingㆍ
+                <BiStar style={{'width':'1.1rem','height':'1.1rem', 'margin-right':'0.1vw'}}/><FollowerNum>5</FollowerNum>
             </Follow>
             <Info>
-                <img src={building} /> Ewha W. University
+                <BiBuildings style={{'width':'1rem','height':'1rem'}}/> Ewha W. University
             </Info>
             <Info>
-                <img src={position} /> Seoul, Korea
+                <FiMapPin style={{'width':'1rem','height':'1rem'}}/> Seoul, Korea
             </Info>
             <Info>
-                <img src={email} /> sua917@ewhain.net
+                <FiMail style={{'width':'1rem','height':'1rem'}}/> sua917@ewhain.net
             </Info>
             <Hr />
             <p style={{'fontWeight':'600'}}>Organizations</p>
@@ -88,7 +87,8 @@ display: flex;
 align-items: center;
 font-size: 0.8rem;
 color: #6E7781;
-gap: 0.1rem;
+gap: 0.1vw;
+padding-left: 0.1vw;
 cursor: pointer;
 `
 
@@ -101,10 +101,11 @@ margin-right: 0.2rem;
 
 const Info = styled.div`
 display: flex;
-align-items: flex-start;
+align-items: flex-end;
 font-size: 0.9rem;
 color: #24292F;
-gap: 0.1rem;
+gap: 0.3vw;
+padding: 0.1rem 0.2vw;
 `
 
 const Hr = styled.hr`

@@ -4,7 +4,7 @@ import GitHubCalendar from 'react-github-calendar';
 import styled from 'styled-components';
 import RepoBox from "../containers/RepoBox";
 import Contribution from '../containers/Contribution';
-import pencil from "../assets/pencil.PNG";
+import {BiPencil} from 'react-icons/bi';
 
 function GitInfo() {
     return (
@@ -12,7 +12,7 @@ function GitInfo() {
             <IntroBox>
                 <Readme>
                     <p style={{'fontSize':'0.75rem'}}>sua-kim / README.md</p>
-                    <img style={{'width':'1.6rem', 'height':'1.6rem', 'cursor':'pointer'}} src={pencil} />
+                    <BiPencil style={{'cursor':'pointer'}}/>
                 </Readme>
                 <p style={{'fontSize':'1.1rem', 'fontWeight': '600'}}>Hi there👋</p>
             </IntroBox>

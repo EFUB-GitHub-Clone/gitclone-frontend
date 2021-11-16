@@ -88,7 +88,6 @@ align-items: center;
 font-size: 0.8rem;
 color: #6E7781;
 gap: 0.1vw;
-padding-left: 0.1vw;
 cursor: pointer;
 `
 
@@ -105,7 +104,7 @@ align-items: flex-end;
 font-size: 0.9rem;
 color: #24292F;
 gap: 0.3vw;
-padding: 0.1rem 0.2vw;
+padding: 0.1rem 0;
 `
 
 const Hr = styled.hr`

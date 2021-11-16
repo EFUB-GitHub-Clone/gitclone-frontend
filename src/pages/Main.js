@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/Header';
 import Profile from '../components/Profile';
@@ -25,7 +26,9 @@ function Main() {
                                 <Button><Icon src={project}/>Projects</Button>
                                 <Button><Icon src={pack}/>Packages</Button>
                             </Menu>
-                            <CreateBtn><BiBookBookmark style={{'margin-right':'0.5rem'}}/>New</CreateBtn>
+                            <Link to = "/create-repo">
+                                <CreateBtn><BiBookBookmark style={{'margin-right':'0.5rem'}}/>New</CreateBtn>
+                            </Link>
                         </Menu>
                     </Menu>
                 </MenuWrapper>
@@ -36,9 +39,11 @@ function Main() {
                     <GitInfo />
                 </div>
             </Wrapper>
-            <Foot>
-                <Footer/>
-            </Foot>
+            <Wrapper>
+                <Foot>
+                    <Footer />
+                </Foot>
+            </Wrapper>
         </MainWrapper>
     );
 }
@@ -112,8 +117,10 @@ justify-content: center;
 `
 
 const Foot = styled.div`
-  width: 70vw;
-  border-top: 1px solid #D8DEE4;
+display: flex;
+width: 70vw;
+margin-top: 1rem;
+border-top: 1px solid #D8DEE4;
 `
 
 export default Main;

@@ -1,12 +1,114 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactTooltip from 'react-tooltip';
 import GitHubCalendar from 'react-github-calendar';
+import axios from 'axios';
 import styled from 'styled-components';
 import RepoBox from "../containers/RepoBox";
 import Contribution from '../containers/Contribution';
 import {BiPencil} from 'react-icons/bi';
 
+const repo = [
+    {
+        "repoIdx": 3,
+        "owner": {
+            "userIdx": 1,
+            "name": "testuser",
+            "password": "1111",
+            "profilePic": null,
+            "follower": null,
+            "following": null,
+            "star": null,
+            "belong": null,
+            "organization": null
+        },
+        "repoName": "testRepo",
+        "description": "testDescription",
+        "type": true,
+        "language": "Java",
+        "readme": true,
+        "license": true,
+        "gitIgnore": true,
+        "fileList": null
+    },
+    {
+        "repoIdx": 4,
+        "owner": {
+            "userIdx": 1,
+            "name": "testuser",
+            "password": "1111",
+            "profilePic": null,
+            "follower": null,
+            "following": null,
+            "star": null,
+            "belong": null,
+            "organization": null
+        },
+        "repoName": "testRepo3",
+        "description": "testDescription",
+        "type": true,
+        "language": "Java",
+        "readme": true,
+        "license": true,
+        "gitIgnore": true,
+        "fileList": null
+    },
+    {
+        "repoIdx": 5,
+        "owner": {
+            "userIdx": 1,
+            "name": "testuser",
+            "password": "1111",
+            "profilePic": null,
+            "follower": null,
+            "following": null,
+            "star": null,
+            "belong": null,
+            "organization": null
+        },
+        "repoName": "testRepo",
+        "description": "testDescription",
+        "type": true,
+        "language": "Java",
+        "readme": true,
+        "license": true,
+        "gitIgnore": true,
+        "fileList": null
+    },
+    {
+        "repoIdx": 6,
+        "owner": {
+            "userIdx": 1,
+            "name": "testuser",
+            "password": "1111",
+            "profilePic": null,
+            "follower": null,
+            "following": null,
+            "star": null,
+            "belong": null,
+            "organization": null
+        },
+        "repoName": "testRepo",
+        "description": "testDescription",
+        "type": true,
+        "language": "Java",
+        "readme": true,
+        "license": true,
+        "gitIgnore": true,
+        "fileList": null
+    }
+]
+
 function GitInfo() {
+    /*const [repo, setRepo]=useState();
+    useEffect(async () => {
+            try {
+                const response = await axios.get(`http://localhost:8080/products/${no}`);
+                setRepo(response.data);
+            } catch (e) {
+                console.log(e)
+            }
+        }, []
+    )*/
     return (
         <GitWrapper>
             <IntroBox>
@@ -21,10 +123,11 @@ function GitInfo() {
                 <GitButton>Customize your pins</GitButton>
             </SubTitle>
             <PinnedWrapper>
-                <RepoBox />
-                <RepoBox />
-                <RepoBox />
-                <RepoBox />
+                { repo ? repo.map((info) => {
+                    return (
+                        <RepoBox title={info.repoName} description={info.description} language={info.language} />
+                    );
+                }):''}
             </PinnedWrapper>
             <SubTitle>819 contributions in the last year</SubTitle>
             <ContributionBox>

@@ -2,13 +2,24 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import {MdArrowDropDown} from 'react-icons/md';
 
+// repoName, description 받아서 저장해야 함
+
 function InputBox() {
 
-  const [myRepo, setMyRepo] = useState({
-    Owner: '',
-    RepoName: '',
-    Description: ''
-  })
+  const [myrepo, setMyrepo] = useState({
+    repoName: '',
+    description: ''
+  });
+
+  const { repoName, description } = myrepo;
+
+  const onChange = (e) => {
+    const { value, name } = e.target;
+    setMyrepo({
+      ...myrepo,
+      [name] : value
+    });
+  };
 
   return (
       <InputBoxWrapper>
@@ -24,7 +35,7 @@ function InputBox() {
           <h1 style={{margin: '10px', fontWeight: '350', paddingTop: '27px'}}>/</h1>
           <InputNameBox>
             <Title>Repository name <span style={{color:'#D02531'}}>*</span></Title>
-            <Input type="text" style={{width: '350px'}}></Input>
+            <Input name="repoName" type="text" onChange={onChange} value={repoName} style={{width: '350px'}}/>
           </InputNameBox>
         </MustInputWrapper>
         <p style={{fontSize: '0.9rem', margin: 0}}>Great repository names are short and memorable. Need inspiration? How about &nbsp;
@@ -32,7 +43,7 @@ function InputBox() {
         </p>
         <InputTextBox>
           <Title>Description <span style={{fontWeight: '350', fontSize: '0.9rem'}}>(optional)</span></Title>
-          <Input type="text" style={{width: "98%"}}></Input>
+          <Input name="description" type="text" onChange={onChange} value={description} style={{width: "98%"}} />
         </InputTextBox>
       </InputBoxWrapper>
   );

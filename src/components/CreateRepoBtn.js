@@ -4,8 +4,9 @@ import styled from 'styled-components';
 // 받은 정보값 백에 넘겨주기
 
 function CreateRepoBtn() {
+  
   const [color, setColor] = useState('#94d3a2')
-  const onClick = () => {
+  const colorChange = () => {
     color === '#94d3a2' ? setColor('#2da44e') : setColor('#94d3a2');
   };
 
@@ -19,7 +20,7 @@ function CreateRepoBtn() {
   `;
 
   return (
-      <Button onClick={onClick}>
+      <Button onClick={colorChange}>
         Create repository
       </Button>
   );

@@ -6,15 +6,22 @@ import {BiLockAlt} from 'react-icons/bi'
 // radio 상태 관리 함수 넣어야 함
 
 function PrivacySetting() {
-  const [checkedItems, setCheckedItems] = useState();
+  const [checkedItems, setCheckedItems] = useState('');
+const handleClickRadioButton = (radioBtnName) => {
+  setCheckedItems(radioBtnName)
+  console.log(radioBtnName)
+}
+
   return (
       <PrivacyWrapper>
         <Label>
           <input
             type="radio"
+            id='Public'
             name="PrivacySetting"
             value="Public"
-            checked={true}
+            checked={checkedItems === 'Public'}
+            onClick={() => handleClickRadioButton('Public')}
           />
           <RiBookLine style={{fontSize: '40px', color: '#57606A', marginRight: '3px'}}/>
           <OptionInfo>
@@ -25,9 +32,11 @@ function PrivacySetting() {
         <Label>
           <input
             type="radio"
+            id='Private'
             name="PrivacySetting"
-            value="Public"
-            checked={true}
+            value="Private"
+            checked={checkedItems === 'Private'}
+            onClick={() => handleClickRadioButton('Private')}
           />
           <BiLockAlt style={{fontSize: '40px', color: '#9A6700', marginRight: '3px'}}/>
           <OptionInfo>

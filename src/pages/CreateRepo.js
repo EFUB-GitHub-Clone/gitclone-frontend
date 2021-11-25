@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import InputBox from '../components/InputBox';
 import PrivacySetting from '../components/PrivacySetting';
@@ -6,8 +6,34 @@ import InitializingRepo from '../components/InitializingRepo';
 import CreateRepoBtn from '../components/CreateRepoBtn';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import axios from 'axios';
 
 function CreateRepo() {
+
+  const [myRepo, setMyrepo] = useState({
+    repoName: "testRepo",
+    description:"testDescription",
+    type:true,
+    language:"Java",
+    readme:true,
+    license:true,
+    gitIgnore:true
+  })
+
+  const submitRepo = () => {
+    axios.post('http://3.36.229.161:8080/api/user/1/repo', {
+      repoName: myRepo.repoName,
+      description: myRepo.description,
+      type:true,
+      language:"Java",
+      readme: myRepo.readme,
+      license: myRepo.license,
+      gitIgnore: myRepo.gitIgnore
+    }).then(()=>{
+      alert('등록 완료!');
+    })
+  };
+
   return (
       <div>
         <Header/>
@@ -29,7 +55,7 @@ function CreateRepo() {
             <InitializingRepo/>
           </Initialize>
           <Submit>
-            <CreateRepoBtn/>
+            <CreateRepoBtn onClick={submitRepo}/>
           </Submit>
           <Foot>
             <Footer/>
@@ -49,7 +75,7 @@ const CreateRepoWrapper = styled.div`
 const Info = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 8vh;
+  padding-top: 25px;
   width: 55vw;
   border-bottom: 1px solid #D8DEE4;
 `

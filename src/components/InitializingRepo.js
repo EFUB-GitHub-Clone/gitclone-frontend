@@ -1,18 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // 다중 체크 박스
 // 박스 선택 시 옵션 다시 선택
+// 체크가 됐는지 안됐는지 확인해야 함
 
 function InitializingRepo() {
+  const [checkedInputs, setCheckedInputs] = useState([]);
+
+  const changeHandler = (checked, id) => {
+    if (checked) {
+      setCheckedInputs([...checkedInputs, id]);
+      console.log(checkedInputs)
+    } else {
+      setCheckedInputs(checkedInputs.filter((el) => el !== id));
+      console.log(checkedInputs)
+    }
+  };
+
     return (
         <div>
           <InitialTitle>Initialize this repository with:</InitialTitle>
           <Discribe>Skip this step if you’re importing an existing repository.</Discribe>
           <Label>
             <input
+              id= 'Read'
               type="checkbox"
               name="README"
+              onChange={(e) => {
+                changeHandler(e.currentTarget.checked, 'Read')
+              }}
+              checked={checkedInputs.includes('Read') ? true : false }
             />
             <OptionInfo>
               <OptionTitle>Add a README file</OptionTitle>
@@ -25,8 +43,13 @@ function InitializingRepo() {
           </Label>
           <Label>
             <input
+              id = 'Git'
               type="checkbox"
               name="gitignore"
+              onChange={(e) => {
+                changeHandler(e.currentTarget.checked, 'Git')
+              }}
+              checked={checkedInputs.includes('Git') ? true : false }
             />
             <OptionInfo>
               <OptionTitle>Add .gitignore</OptionTitle>
@@ -39,8 +62,13 @@ function InitializingRepo() {
           </Label>
           <Label>
             <input
+             id ='Lic'
               type="checkbox"
               name="license"
+              onChange={(e) => {
+                changeHandler(e.currentTarget.checked, 'Lic')
+              }}
+              checked={checkedInputs.includes('Lic') ? true : false }
             />
             <OptionInfo>
               <OptionTitle>Choose a license</OptionTitle>

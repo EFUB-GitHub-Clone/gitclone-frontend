@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import Main from './pages/Main';
 import CreateRepo from './pages/CreateRepo';
+import RepoDetail from './pages/RepoDetail';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={Main}/>
         <Route path="/create-repo" component={CreateRepo}/>
+        <Route path="/repo-detail/" component={RepoDetail}/>
       </BrowserRouter>
     </div>
 

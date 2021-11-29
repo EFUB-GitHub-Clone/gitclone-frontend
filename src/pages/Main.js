@@ -15,19 +15,19 @@ function Main() {
     return (
         <MainWrapper>
             <Header />
-            <Wrapper style={{'border-bottom': '1px solid #D8DEE4'}}>
+            <Wrapper style={{'borderBottom': '1px solid #D8DEE4'}}>
                 <MenuWrapper>
                     <Menu style={{'width':'70vw'}}>
                         <Menu style={{'width':'20vw'}} />
-                        <Menu style={{'width':'50vw', 'justify-content':'space-between'}}>
+                        <Menu style={{'width':'50vw', 'justifyContent':'space-between'}}>
                             <Menu>
                                 <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><Icon src={overview}/>Overview</Button>
                                 <Button><Icon src={repo}/>Repositories<RepoNum>14</RepoNum></Button>
                                 <Button><Icon src={project}/>Projects</Button>
                                 <Button><Icon src={pack}/>Packages</Button>
                             </Menu>
-                            <Link to = "/create-repo">
-                                <CreateBtn><BiBookBookmark style={{'margin-right':'0.5rem'}}/>New</CreateBtn>
+                            <Link to = "/create-repo" style={{'textDecorationLine':'none'}}>
+                                <CreateBtn><BiBookBookmark style={{'marginRight':'0.5rem'}}/>New</CreateBtn>
                             </Link>
                         </Menu>
                     </Menu>

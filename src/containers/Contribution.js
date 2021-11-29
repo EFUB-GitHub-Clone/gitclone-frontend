@@ -24,7 +24,7 @@ function Contribution() {
             <Timeline style={{'height':'2rem'}}/>
             <Activity>
                 <ActivitySummary>
-                    <img src={commit} />
+                    <TypeImg src={commit} />
                     <div style={{'marginLeft':'1rem'}}>Created 13 commits in 3 repositories</div>
                 </ActivitySummary>
                 <Button onClick = {()=>onDisplay(0)}><img src={hide} /></Button>
@@ -59,7 +59,7 @@ function Contribution() {
 
             <Activity>
                 <ActivitySummary>
-                    <img src={fork} />
+                    <TypeImg src={fork} />
                     <div style={{'marginLeft':'1rem'}}>Opened 2 pull requests in 1 repository</div>
                 </ActivitySummary>
                 <Button onClick = {()=>onDisplay(1)}><img src={hide} /></Button>
@@ -89,7 +89,7 @@ function Contribution() {
 
             <Activity>
                 <ActivitySummary>
-                    <img src={issue} />
+                    <TypeImg src={issue} />
                     <div style={{'marginLeft':'1rem'}}>Opened 1 issue in 1 repository</div>
                 </ActivitySummary>
                 <Button onClick = {()=>onDisplay(2)}><img src={hide} /></Button>
@@ -113,7 +113,7 @@ function Contribution() {
 
             <Activity>
                 <ActivitySummary>
-                    <img src={organization} />
+                    <TypeImg src={organization} />
                     <div style={{'marginLeft':'1rem'}}>Joined the EFUB-GitHub-Clone organization</div>
                 </ActivitySummary>
                 <Button>on Nov 6</Button>
@@ -167,6 +167,11 @@ border: 0;
 const Timeline = styled.div`
 margin-left: 0.7rem;
 border-left: 2px solid #D8DEE4;
+`
+
+const TypeImg = styled.img`
+width: 1.8rem;
+height: 1.8rem;
 `
 
 const Activity = styled.div`

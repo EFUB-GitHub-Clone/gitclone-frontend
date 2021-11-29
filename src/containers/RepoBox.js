@@ -3,23 +3,23 @@ import styled from 'styled-components';
 import repo from '../assets/repo.PNG';
 import {FiTrash2} from 'react-icons/fi';
 
-function RepoBox() {
+function RepoBox(props) {
     return (
         <Box>
             <RepoTitle>
                 <div style={{'display':'flex', 'alignItems': 'center'}}>
                     <Icon src={repo}/>
-                    <RepoName>Algorithm</RepoName>
+                    <RepoName>{props.title}</RepoName>
                 </div>
                 <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.5vw'}}>
                     <Status>Public</Status>
                     <DeleteBtn><FiTrash2 /></DeleteBtn>
                 </div>
             </RepoTitle>
-            <RepoContent>알고리즘 소스코드 기록 레포</RepoContent>
+            <RepoContent>{props.description}</RepoContent>
             <Language>
                 <Circle style={{'background':'#3572A5'}} />
-                <RepoContent>Python</RepoContent>
+                <RepoContent>{props.language}</RepoContent>
             </Language>
         </Box>
     );

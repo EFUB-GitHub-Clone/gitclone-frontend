@@ -166,7 +166,7 @@ function CreateRepo() {
             <input
               id = 'Git'
               type="checkbox"
-              name="gitignore"
+              name="gitIgnore"
               checked={gitIgnore}
               onClick={onClickOption}
             />

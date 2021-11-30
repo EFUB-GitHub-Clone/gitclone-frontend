@@ -48,7 +48,7 @@ function CreateRepo() {
     setMyrepo(clickOption);
   };
 
-  const submitRepo = async(e) => {
+  const submitRepo = async() => {
     axios.post('http://3.36.229.161:8080/api/user/1/repo', myRepo).then(()=>{
       alert('등록 완료!');
     })

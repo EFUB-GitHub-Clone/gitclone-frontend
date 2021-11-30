@@ -1,38 +1,46 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import FileList from '../components/FileList';
 import {BiBookBookmark, BiCode, BiGitPullRequest, BiBookOpen, BiLineChart} from 'react-icons/bi';
 import {VscIssues, VscProject} from 'react-icons/vsc';
 import {BsPlayCircle, BsShieldExclamation} from 'react-icons/bs';
 
-function RepoDetail() {
+function RepoDetail(props) {
+    console.log(props);
     return (
-        <MainWrapper>
-            <Header />
-            <MenuWrapper>
-                <Title>
-                    <BiBookBookmark style={{'marginRight':'0.5rem', 'color':'#57606A'}}/>
-                    sua-kim
-                    <div style={{'marginRight':'0.5rem', 'marginLeft':'0.5rem', 'color':'#57606A'}}> / </div>
-                    <div style={{'fontWeight':'600'}}>Algorithm</div>
-                    <Status>Public</Status>
-                </Title>
-            </MenuWrapper>
-            <MenuWrapper>
-                <Menu>
-                    <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><BiCode style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem'}} />Code</Button>
-                    <Button><VscIssues style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Issues</Button>
-                    <Button><BiGitPullRequest style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Pull requests</Button>
-                    <Button><BsPlayCircle style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Actions</Button>
-                    <Button><VscProject style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Projects</Button>
-                    <Button><BiBookOpen style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Wiki</Button>
-                    <Button><BsShieldExclamation style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Security</Button>
-                    <Button><BiLineChart style={{'paddingRight':'0.5rem', 'fontSize':'1.2frem', 'color':'#57606A'}} />Insights</Button>
-                    <UploadBtn for='input-file'>Add file</UploadBtn>
-                    <input type='file' id='input-file' style={{'display':'none'}} />
-                </Menu>
-            </MenuWrapper>
-        </MainWrapper>
+        <>
+            <MainWrapper>
+                <Header />
+                <MenuWrapper>
+                    <Title>
+                        <BiBookBookmark style={{'marginRight':'0.5rem', 'color':'#57606A'}}/>
+                        <Link to = {`/`} style={{'textDecoration':'none', 'color':'inherit'}}>sua-kim</Link>
+                        <div style={{'marginRight':'0.5rem', 'marginLeft':'0.5rem', 'color':'#57606A'}}> / </div>
+                        <div style={{'fontWeight':'600'}}>{props.location.state.title}</div>
+                        <Status>Public</Status>
+                    </Title>
+                </MenuWrapper>
+                <MenuWrapper>
+                    <Menu>
+                        <Button style={{'fontWeight':'600', 'color':'black', 'borderBottom':'2px solid #FD8C73'}}><BiCode style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem'}} />Code</Button>
+                        <Button><VscIssues style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Issues</Button>
+                        <Button><BiGitPullRequest style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Pull requests</Button>
+                        <Button><BsPlayCircle style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Actions</Button>
+                        <Button><VscProject style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Projects</Button>
+                        <Button><BiBookOpen style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Wiki</Button>
+                        <Button><BsShieldExclamation style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Security</Button>
+                        <Button><BiLineChart style={{'paddingRight':'0.5rem', 'fontSize':'1.2rem', 'color':'#57606A'}} />Insights</Button>
+                        <UploadBtn for='input-file'>Add file</UploadBtn>
+                        <input type='file' id='input-file' style={{'display':'none'}} />
+                    </Menu>
+                </MenuWrapper>
+            </MainWrapper>
+            <MainWrapper style={{'background':'#FFFFFF'}}>
+                <FileList title = {props.location.state.title} files = {props.location.state.fileList} />
+            </MainWrapper>
+        </>
     );
 }
 
@@ -100,17 +108,6 @@ padding: 0 1rem;
 margin-bottom: 0.2rem; margin-left: 1rem;
 cursor: pointer;
 `
-
-const RepoNum = styled.div`
-background: #EFF1F3;
-padding: 0.3rem;
-border-radius: 40%;
-font-size: 0.75rem;
-font-weight: 600;
-margin-left: 0.3rem;
-`
-
-
 
 const Foot = styled.div`
 display: flex;

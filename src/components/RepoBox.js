@@ -1,25 +1,42 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import repo from '../assets/repo.PNG';
 import {FiTrash2} from 'react-icons/fi';
 
-function RepoBox() {
+function RepoBox(props) {
+    console.log(props)
+    const deleteRepo = async () => {
+        if(window.confirm(`${props?.title}를 삭제하시겠습니까?`)) {
+            /*await axios.delete(`http://3.36.229.161:8080/api/repo/${props?.id}`);*/
+            alert('레포지토리가 성공적으로 삭제되었습니다.');
+            return window.location.href = "/";
+        }
+    }
     return (
         <Box>
             <RepoTitle>
                 <div style={{'display':'flex', 'alignItems': 'center'}}>
                     <Icon src={repo}/>
-                    <RepoName>Algorithm</RepoName>
+                    <Link to={{
+                        pathname : `repo-detail/${props.id}`,
+                        state: {
+                            title: props.title,
+                            fileList: props.fileList
+                        }
+                    }} style={{'textDecoration':'none', 'color':'inherit'}}>
+                        <RepoName>{props.title}</RepoName>
+                    </Link>
                 </div>
                 <div style={{'display':'flex', 'alignItems': 'center', 'gap':'0.5vw'}}>
                     <Status>Public</Status>
-                    <DeleteBtn><FiTrash2 /></DeleteBtn>
+                    <DeleteBtn onClick={deleteRepo}><FiTrash2 /></DeleteBtn>
                 </div>
             </RepoTitle>
-            <RepoContent>알고리즘 소스코드 기록 레포</RepoContent>
+            <RepoContent>{props.description}</RepoContent>
             <Language>
                 <Circle style={{'background':'#3572A5'}} />
-                <RepoContent>Python</RepoContent>
+                <RepoContent>{props.language}</RepoContent>
             </Language>
         </Box>
     );

@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={Main}/>
         <Route path="/create-repo" component={CreateRepo}/>
-        <Route path="/repo-detail/" component={RepoDetail}/>
+        <Route path="/repo-detail/:no" component={RepoDetail}/>
       </BrowserRouter>
     </div>
 

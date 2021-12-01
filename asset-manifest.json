@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/gitclone-frontend/static/css/main.d2244f90.chunk.css",
+    "main.js": "/gitclone-frontend/static/js/main.3eefca89.chunk.js",
+    "main.js.map": "/gitclone-frontend/static/js/main.3eefca89.chunk.js.map",
+    "runtime-main.js": "/gitclone-frontend/static/js/runtime-main.de55338f.js",
+    "runtime-main.js.map": "/gitclone-frontend/static/js/runtime-main.de55338f.js.map",
+    "static/js/2.f81d7e6f.chunk.js": "/gitclone-frontend/static/js/2.f81d7e6f.chunk.js",
+    "static/js/2.f81d7e6f.chunk.js.map": "/gitclone-frontend/static/js/2.f81d7e6f.chunk.js.map",
+    "index.html": "/gitclone-frontend/index.html",
+    "static/css/main.d2244f90.chunk.css.map": "/gitclone-frontend/static/css/main.d2244f90.chunk.css.map",
+    "static/js/2.f81d7e6f.chunk.js.LICENSE.txt": "/gitclone-frontend/static/js/2.f81d7e6f.chunk.js.LICENSE.txt",
+    "static/media/bigLogo.dcdd40a3.PNG": "/gitclone-frontend/static/media/bigLogo.dcdd40a3.PNG",
+    "static/media/check.2b793367.PNG": "/gitclone-frontend/static/media/check.2b793367.PNG",
+    "static/media/commit.afaf3265.PNG": "/gitclone-frontend/static/media/commit.afaf3265.PNG",
+    "static/media/fork.b8788079.PNG": "/gitclone-frontend/static/media/fork.b8788079.PNG",
+    "static/media/github-mark.9b5f6ccc.PNG": "/gitclone-frontend/static/media/github-mark.9b5f6ccc.PNG",
+    "static/media/hide.5f837e46.PNG": "/gitclone-frontend/static/media/hide.5f837e46.PNG",
+    "static/media/issue.84395561.PNG": "/gitclone-frontend/static/media/issue.84395561.PNG",
+    "static/media/merged.a3a4d62a.PNG": "/gitclone-frontend/static/media/merged.a3a4d62a.PNG",
+    "static/media/organization.833d2211.PNG": "/gitclone-frontend/static/media/organization.833d2211.PNG",
+    "static/media/organization1.678d08e8.PNG": "/gitclone-frontend/static/media/organization1.678d08e8.PNG",
+    "static/media/organization2.887845dc.PNG": "/gitclone-frontend/static/media/organization2.887845dc.PNG",
+    "static/media/organization3.d4658308.PNG": "/gitclone-frontend/static/media/organization3.d4658308.PNG",
+    "static/media/organization4.86aedd43.PNG": "/gitclone-frontend/static/media/organization4.86aedd43.PNG",
+    "static/media/overview.0889a785.PNG": "/gitclone-frontend/static/media/overview.0889a785.PNG",
+    "static/media/package.b6f3b331.PNG": "/gitclone-frontend/static/media/package.b6f3b331.PNG",
+    "static/media/plus.69595360.PNG": "/gitclone-frontend/static/media/plus.69595360.PNG",
+    "static/media/profileImg.6d1ed6a5.jpg": "/gitclone-frontend/static/media/profileImg.6d1ed6a5.jpg",
+    "static/media/project.2fa78ce7.PNG": "/gitclone-frontend/static/media/project.2fa78ce7.PNG",
+    "static/media/repo.6b598ffb.PNG": "/gitclone-frontend/static/media/repo.6b598ffb.PNG",
+    "static/media/user.5406ccd2.PNG": "/gitclone-frontend/static/media/user.5406ccd2.PNG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de55338f.js",
+    "static/js/2.f81d7e6f.chunk.js",
+    "static/css/main.d2244f90.chunk.css",
+    "static/js/main.3eefca89.chunk.js"
+  ]
+}

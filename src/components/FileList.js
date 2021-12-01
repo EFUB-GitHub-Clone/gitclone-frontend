@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 function FileList(props) {
     const files = props.files ? props.files.map(file => (file||'').split('/').slice(-1)[0]) : [''];

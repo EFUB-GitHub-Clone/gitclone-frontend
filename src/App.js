@@ -7,7 +7,7 @@ import RepoDetail from './pages/RepoDetail';
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}> 
         <Route exact path="/" component={Main}/>
         <Route path="/create-repo" component={CreateRepo}/>
         <Route path="/repo-detail/:no" component={RepoDetail}/>

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gitclone-frontend/static/css/main.d2244f90.chunk.css",
-    "main.js": "/gitclone-frontend/static/js/main.3eefca89.chunk.js",
-    "main.js.map": "/gitclone-frontend/static/js/main.3eefca89.chunk.js.map",
+    "main.js": "/gitclone-frontend/static/js/main.3f470c0a.chunk.js",
+    "main.js.map": "/gitclone-frontend/static/js/main.3f470c0a.chunk.js.map",
     "runtime-main.js": "/gitclone-frontend/static/js/runtime-main.de55338f.js",
     "runtime-main.js.map": "/gitclone-frontend/static/js/runtime-main.de55338f.js.map",
     "static/js/2.f81d7e6f.chunk.js": "/gitclone-frontend/static/js/2.f81d7e6f.chunk.js",
@@ -35,6 +35,6 @@
     "static/js/runtime-main.de55338f.js",
     "static/js/2.f81d7e6f.chunk.js",
     "static/css/main.d2244f90.chunk.css",
-    "static/js/main.3eefca89.chunk.js"
+    "static/js/main.3f470c0a.chunk.js"
   ]
 }

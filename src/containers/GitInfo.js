@@ -7,175 +7,18 @@ import RepoBox from "../components/RepoBox";
 import Contribution from './Contribution';
 import {BiPencil} from 'react-icons/bi';
 
-const repo = [
-    {
-        "repoIdx": 4,
-        "owner": {
-            "userIdx": 1,
-            "name": "testuser",
-            "password": "1111",
-            "profilePic": null,
-            "follower": null,
-            "following": null,
-            "star": null,
-            "belong": null,
-            "organization": null
-        },
-        "repoName": "testRepo3",
-        "description": "testDescription",
-        "type": true,
-        "language": "Java",
-        "readme": true,
-        "license": true,
-        "gitIgnore": true,
-        "fileList": null
-    },
-    {
-        "repoIdx": 5,
-        "owner": {
-            "userIdx": 1,
-            "name": "testuser",
-            "password": "1111",
-            "profilePic": null,
-            "follower": null,
-            "following": null,
-            "star": null,
-            "belong": null,
-            "organization": null
-        },
-        "repoName": "testRepo",
-        "description": "testDescription",
-        "type": true,
-        "language": "Java",
-        "readme": true,
-        "license": true,
-        "gitIgnore": true,
-        "fileList": null
-    },
-    {
-        "repoIdx": 6,
-        "owner": {
-            "userIdx": 1,
-            "name": "testuser",
-            "password": "1111",
-            "profilePic": null,
-            "follower": null,
-            "following": null,
-            "star": null,
-            "belong": null,
-            "organization": null
-        },
-        "repoName": "testRepo",
-        "description": "testDescription",
-        "type": true,
-        "language": "Java",
-        "readme": true,
-        "license": true,
-        "gitIgnore": true,
-        "fileList": ["https://efub-git-clone.s3.ap-northeast-2.amazonaws.com/Graph.docx"]
-    },
-    {
-        "repoIdx": 7,
-        "owner": {
-            "userIdx": 1,
-            "name": "testuser",
-            "password": "1111",
-            "profilePic": null,
-            "follower": null,
-            "following": null,
-            "star": null,
-            "belong": null,
-            "organization": null
-        },
-        "repoName": "testRepo",
-        "description": "testDescription",
-        "type": true,
-        "language": "Java",
-        "readme": true,
-        "license": true,
-        "gitIgnore": true,
-        "fileList": null
-    },
-    {
-        "repoIdx": 8,
-        "owner": {
-            "userIdx": 1,
-            "name": "testuser",
-            "password": "1111",
-            "profilePic": null,
-            "follower": null,
-            "following": null,
-            "star": null,
-            "belong": null,
-            "organization": null
-        },
-        "repoName": "testRepo",
-        "description": "testDescription",
-        "type": true,
-        "language": "Java",
-        "readme": true,
-        "license": true,
-        "gitIgnore": true,
-        "fileList": null
-    },
-    {
-        "repoIdx": 9,
-        "owner": {
-            "userIdx": 1,
-            "name": "testuser",
-            "password": "1111",
-            "profilePic": null,
-            "follower": null,
-            "following": null,
-            "star": null,
-            "belong": null,
-            "organization": null
-        },
-        "repoName": "testRepo",
-        "description": "testDescription",
-        "type": true,
-        "language": "Java",
-        "readme": true,
-        "license": true,
-        "gitIgnore": true,
-        "fileList": null
-    },
-    {
-        "repoIdx": 10,
-        "owner": {
-            "userIdx": 1,
-            "name": "testuser",
-            "password": "1111",
-            "profilePic": null,
-            "follower": null,
-            "following": null,
-            "star": null,
-            "belong": null,
-            "organization": null
-        },
-        "repoName": "testRepo",
-        "description": "testDescription",
-        "type": true,
-        "language": "Java",
-        "readme": true,
-        "license": true,
-        "gitIgnore": true,
-        "fileList": null
-    }
-]
 
 function GitInfo() {
-    /*const [repo, setRepo] = useState();
+    const [repo, setRepo] = useState();
     useEffect(async () => {
             try {
                 const response = await axios.get(`http://3.36.229.161:8080/api/repo`);
                 setRepo(response.data);
-                console.log(response.data);
             } catch (e) {
                 console.log(e)
             }
         }, []
-    )*/
+    );
 
     return (
         <GitWrapper>

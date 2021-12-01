@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
+import axios from 'axios';
 import repo from '../assets/repo.PNG';
 import {FiTrash2} from 'react-icons/fi';
 
 function RepoBox(props) {
-    console.log(props)
     const deleteRepo = async () => {
         if(window.confirm(`${props?.title}를 삭제하시겠습니까?`)) {
-            /*await axios.delete(`http://3.36.229.161:8080/api/repo/${props?.id}`);*/
+            await axios.delete(`http://3.36.229.161:8080/api/repo/${props?.id}`);
             alert('레포지토리가 성공적으로 삭제되었습니다.');
             return window.location.href = "/";
         }

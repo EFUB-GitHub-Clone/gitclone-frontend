@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 function FileList(props) {
-    const files = props.files ? props.files.map(file => file.split('/').slice(-1)[0]) : ['등록된 파일이 없습니다.'];
-    console.log(files);
+    const files = props.files ? props.files.map(file => (file||'').split('/').slice(-1)[0]) : [''];
     return (
         <div>
             <table>
@@ -25,9 +24,5 @@ function FileList(props) {
         </div>
     );
 }
-
-const TableWrapper = styled.div`
-
-`
 
 export default FileList;

@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gitclone-frontend/static/css/main.d2244f90.chunk.css",
-    "main.js": "/gitclone-frontend/static/js/main.3f470c0a.chunk.js",
-    "main.js.map": "/gitclone-frontend/static/js/main.3f470c0a.chunk.js.map",
+    "main.js": "/gitclone-frontend/static/js/main.8dc29eac.chunk.js",
+    "main.js.map": "/gitclone-frontend/static/js/main.8dc29eac.chunk.js.map",
     "runtime-main.js": "/gitclone-frontend/static/js/runtime-main.de55338f.js",
     "runtime-main.js.map": "/gitclone-frontend/static/js/runtime-main.de55338f.js.map",
-    "static/js/2.f81d7e6f.chunk.js": "/gitclone-frontend/static/js/2.f81d7e6f.chunk.js",
-    "static/js/2.f81d7e6f.chunk.js.map": "/gitclone-frontend/static/js/2.f81d7e6f.chunk.js.map",
+    "static/js/2.b47ebf39.chunk.js": "/gitclone-frontend/static/js/2.b47ebf39.chunk.js",
+    "static/js/2.b47ebf39.chunk.js.map": "/gitclone-frontend/static/js/2.b47ebf39.chunk.js.map",
     "index.html": "/gitclone-frontend/index.html",
     "static/css/main.d2244f90.chunk.css.map": "/gitclone-frontend/static/css/main.d2244f90.chunk.css.map",
-    "static/js/2.f81d7e6f.chunk.js.LICENSE.txt": "/gitclone-frontend/static/js/2.f81d7e6f.chunk.js.LICENSE.txt",
+    "static/js/2.b47ebf39.chunk.js.LICENSE.txt": "/gitclone-frontend/static/js/2.b47ebf39.chunk.js.LICENSE.txt",
     "static/media/bigLogo.dcdd40a3.PNG": "/gitclone-frontend/static/media/bigLogo.dcdd40a3.PNG",
     "static/media/check.2b793367.PNG": "/gitclone-frontend/static/media/check.2b793367.PNG",
     "static/media/commit.afaf3265.PNG": "/gitclone-frontend/static/media/commit.afaf3265.PNG",
@@ -33,8 +33,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.de55338f.js",
-    "static/js/2.f81d7e6f.chunk.js",
+    "static/js/2.b47ebf39.chunk.js",
     "static/css/main.d2244f90.chunk.css",
-    "static/js/main.3f470c0a.chunk.js"
+    "static/js/main.8dc29eac.chunk.js"
   ]
 }
